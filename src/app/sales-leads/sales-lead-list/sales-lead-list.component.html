@@ -1,0 +1,35 @@
+
+<div class="sales-leads__card">
+<div>
+Sales Leads
+</div>
+<div>
+Showing {{count}} of {{count}}
+</div>
+<div class="sales-leads">
+ <button class="sales-leads__button" (click)="addSalesLead()" type="button"> Add Lead</button>
+</div>
+
+   <table>
+   <thead>
+    <tr>
+    <th>Lead name</th>
+    <th>Sales Rep</th>
+    <th>Clients</th>
+    <th>Value</th>
+    <th>Date</th>
+    <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let salesLead of salesLeads">
+     <td>{{salesLead.client}}</td>
+      <td>{{salesLead.date}}</td>
+      <td>{{salesLead.lead}}</td>
+      <td>{{salesLead.rep}}</td>
+      <td>{{salesLead.value}}</td>
+      <td>x</td>
+   </tr>
+  <tbody>
+   </table>
+</div>

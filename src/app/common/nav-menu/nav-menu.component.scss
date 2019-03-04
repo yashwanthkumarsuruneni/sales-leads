@@ -1,0 +1,17 @@
+// .accounts-list__item {
+
+// }
+
+.accounts-list__item {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  .active {
+    border-top: 1px solid #00a1b2;
+    border-bottom: 1px solid #00a1b2;
+  }
+}
+
+.accounts-list {
+  position: relative;
+  top: 60px;
+}

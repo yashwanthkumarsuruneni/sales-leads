@@ -1,0 +1,12 @@
+<header class="navigation-header">
+<div class="navigation-header__item--active">
+<span class="navigation-header__text">Accounts</span>
+<span class="navigation-header__right-border"></span>
+</div>
+<div *ngFor="let page of pages | async">
+<div class="navigation-header__item" (click)="goTo(page)">
+<span class="navigation-header__text">{{page}}</span>
+<span class="navigation-header__right-border"></span>
+</div>
+</div>
+</header>

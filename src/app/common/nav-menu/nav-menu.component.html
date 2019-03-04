@@ -1,0 +1,11 @@
+<nav class="accounts-list">
+  <div class="acoounts-list__heading"> Accounts</div>
+  <ul>
+  <li class="accounts-list__item" *ngFor="let account of accounts">
+    <div routerLinkActive="active" routerLink="/{{account.path}}">
+      <div>{{account.name}}</div>
+      <div>{{account.description}}</div>
+    </div>
+  </li>
+  </ul>
+</nav>

@@ -1,16 +1,63 @@
+/*==============================
+=             RESPONSIVE MIXINS            =
+==============================*/
+
+// Global Variables
+$screen-sm: 768px;
+$screen-md: 1025px;
+$screen-lg: 1200px;
+@mixin respond-to($breakpoint) {
+   @if $breakpoint=="small-max" {
+      @media (max-width: $screen-sm - 1) {
+         @content;
+      }
+   }
+   @if $breakpoint=="medium-max" {
+      @media (max-width: $screen-md - 1) {
+         @content;
+      }
+   }
+   @if $breakpoint=="large-max" {
+      @media (max-width: $screen-lg - 1) {
+         @content;
+      }
+   }
+   @if $breakpoint=="small" {
+      @media (min-width: $screen-sm) {
+         @content;
+      }
+   }
+   @else if $breakpoint=="medium" {
+      @media (min-width: $screen-md) {
+         @content;
+      }
+   }
+   @else if $breakpoint=="large" {
+      @media (min-width: $screen-lg) {
+         @content;
+      }
+   }
+   @else if $breakpoint=="print" {
+      @media print {
+         @content;
+      }
+   }
+}
+
 @mixin on-event($self: false) {
-    @if $self {
+   @if $self {
       &,
       &:hover,
       &:active,
       &:focus {
-        @content;
+         @content;
       }
-    } @else {
+   }
+   @else {
       &:hover,
       &:active,
       &:focus {
-        @content;
+         @content;
       }
-    }
+   }
 }

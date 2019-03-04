@@ -1,0 +1,30 @@
+<div class="sales-leads__card">
+<div class="add-sales-lead">
+<h1>Add Sales Lead</h1>
+<p> Enter Sales lead information below</p>
+<form class="add-sales-lead__form" [formGroup]="salesLeadForm" (ngSubmit)="onSubmit()">
+<div class="add-sales-lead__form-group">
+<label for="lead">Lead-name</label>
+<input type="text" id="lead" formControlName="lead">
+</div>
+<div class="add-sales-lead__form-group">
+<label for="rep">Sales representative</label>
+<input type="text" id="rep" formControlName="rep">
+</div>
+<div class="add-sales-lead__form-group">
+<label for="client">Client</label>
+<input type="text" id="client" formControlName="client">
+</div>
+<div class="add-sales-lead__form-group">
+<label for="value">Value</label>
+<input type="text" id="value" formControlName="value">
+</div>
+<div class="add-sales-lead__form-group">
+<label for="date">Date</label>
+<input type="text" id="date" formControlName="date" placeholder="mm/dd/yyyy">
+</div>
+<button type="button" (click)="salesLeadList()">Cancel</button>
+<button type="submit">Save</button>
+</form>
+</div>
+</div>

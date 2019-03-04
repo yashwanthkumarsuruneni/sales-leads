@@ -1,0 +1,77 @@
+@import "../../../styles/main";
+
+.global-header {
+  background: #303740;
+  color: white;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  padding: 12px 0;
+}
+
+.global-header__hamburger > div:first-child {
+  width: 14px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 2.5px;
+}
+.global-header__hamburger > div:last-child {
+  width: 14px;
+  height: 2px;
+  background-color: white;
+  margin-top: 2.5px;
+}
+.global-header__hamburger > div:nth-child(2) {
+  width: 14px;
+  height: 2px;
+  background-color: white;
+  margin-top: 2.5px;
+}
+
+.global-header__dashboard {
+  background-image: icon("../../..", "Dashboards.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  justify-content: flex-start;
+}
+
+.global-header__search {
+  background-image: icon("../../..", "search.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.global-header__profile {
+  background-image: icon("../../..", "User.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.global-header__previous {
+  background-image: icon("../../..", "leftr.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.global-header__next {
+  background-image: icon("../../..", "left.svg");
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.global-header__text {
+  font-size: 13px;
+}
+
+.global-header__hours {
+  font-size: 13px;
+  padding-right: 10px;
+}
