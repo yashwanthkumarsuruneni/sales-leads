@@ -1,7 +1,7 @@
 import { Observable } from "rxjs";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { SalesLeadService } from "../../leads-service";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router } from "@angular/router";
 import { map } from "rxjs/operators";
 @Component({
   selector: "nav-header",
@@ -19,13 +19,12 @@ export class NavHeaderComponent implements OnInit {
         page
           .toString()
           .split("/")
-          .filter(page => page.length !== 0)
+          .filter(pages => pages.length !== 0)
       )
     );
   }
 
   goTo(event) {
-    console.log(event);
     this.router.navigate([event]);
   }
 }

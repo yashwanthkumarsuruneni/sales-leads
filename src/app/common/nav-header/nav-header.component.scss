@@ -8,10 +8,18 @@
   display: flex;
 }
 
-.navigation-header__item--active {
+.navigation-header__item {
   background: #008cdb;
   border-top-right-radius: 28px;
   border-bottom-right-radius: 28px;
+}
+
+.navigation-header__item-list {
+  &:not(:last-child) {
+    background: #008cdb;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+  }
 }
 .navigation-header__text {
   padding-left: 12px;
