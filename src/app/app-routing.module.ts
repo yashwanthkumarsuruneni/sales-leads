@@ -13,6 +13,11 @@ const routes: Routes = [
       { path: "addsaleslead", component: AddSalesLeadComponent }
     ]
   },
+  {
+    path: "addsaleslead",
+    redirectTo: "/salesleads/addsaleslead",
+    pathMatch: "full"
+  },
   { path: "", redirectTo: "/salesleads", pathMatch: "full" },
   { path: "contacts", redirectTo: "/salesleads", pathMatch: "full" },
   { path: "calender", redirectTo: "/salesleads", pathMatch: "full" },

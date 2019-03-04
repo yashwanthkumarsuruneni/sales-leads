@@ -1,1 +1,15 @@
 @import "../styles/main.scss";
+
+.sales-leads__button {
+  background-color: #00a1b2;
+  height: 32px;
+  width: 88px;
+  color: white;
+  border-radius: 3px;
+}
+
+.sales-leads__button--default {
+  @extend .sales-leads__button;
+  color: #00a1b2;
+  background-color: white;
+}

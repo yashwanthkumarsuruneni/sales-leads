@@ -30,7 +30,7 @@ export class AddSalesLeadComponent implements OnInit {
   onSubmit() {
     this.saleslead
       .addSalesLead(this.salesLeadForm.value)
-      .subscribe(x => console.log(x));
+      .subscribe(console.log);
     this.salesLeadForm.reset();
   }
   salesLeadList() {

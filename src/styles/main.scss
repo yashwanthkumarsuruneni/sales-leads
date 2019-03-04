@@ -1,17 +1,10 @@
 @charset 'UTF-8';
 // 1. Configuration and helpers
-@import "abstracts/variables",
-"abstracts/functions",
-"abstracts/mixins";
-// 2. Vendors
-@import "vendors/normalize";
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
 // 3. Base stuff
-@import "base/base",
-"base/fonts",
-"base/typography";
-@import "layout/column",
-"layout/container",
-"layout/row";
+@import "base/base", "base/fonts", "base/typography";
+// 4 . Grid
+@import "layout/column", "layout/container", "layout/row";
 html {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
