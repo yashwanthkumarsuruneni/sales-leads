@@ -3,22 +3,15 @@
 // -----------------------------------------------------------------------------
 /// Regular font family
 /// @type List
-$text-font-stack: "Bernina Sans Offc" !default;
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$text-font-stack: "Open Sans", sans-serif;
+$text-size-default: 16px;
+$text-size-headings: 24px;
+$text-size-primary: 14px;
+$text-size-secondary: 12px;
+$line-height-default: 1.2;
+$font-weight-default: 400;
+$font-weight-headings: 500;
+
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;

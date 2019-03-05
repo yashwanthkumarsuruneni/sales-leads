@@ -9,7 +9,8 @@ import { SalesLeadService } from "../../leads-service";
 })
 export class SalesLeadListComponent implements OnInit {
   count: number;
-  salesLeads: Array<Object>;
+  showSpinner = true;
+  salesLeads: Array<any>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -25,8 +26,8 @@ export class SalesLeadListComponent implements OnInit {
     this.salesLead.getSalesLeads().subscribe(({ count, payload }) => {
       this.count = count;
       this.salesLeads = payload;
+      this.showSpinner = false;
     });
-    console.log(this.salesLeads);
   }
   addSalesLead() {
     this.router.navigate(["addsaleslead"], { relativeTo: this.route });

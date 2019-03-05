@@ -1,7 +1,8 @@
 
 <div class="sales-leads__card">
-<div>
+<div class="sales-leads__title"><h1>
 Sales Leads
+</h1>
 </div>
 <div>
 Showing {{count}} of {{count}}
@@ -9,8 +10,8 @@ Showing {{count}} of {{count}}
 <div class="sales-leads">
  <button class="sales-leads__button" (click)="addSalesLead()" type="button"> Add Lead</button>
 </div>
-
-   <table>
+ <div>
+    <table class="sales-leads__table">
    <thead>
     <tr>
     <th>Lead name</th>
@@ -24,12 +25,14 @@ Showing {{count}} of {{count}}
   <tbody>
    <tr *ngFor="let salesLead of salesLeads">
      <td>{{salesLead.lead}}</td>
-      <td>{{salesLead.date}}</td>
+     <td>{{salesLead.rep}}</td>
       <td>{{salesLead.client}}</td>
-      <td>{{salesLead.rep}}</td>
       <td>{{salesLead.value}}</td>
+       <td>{{salesLead.date | date:'short'}}</td>
       <td>X</td>
    </tr>
   <tbody>
-   </table>
+  </table>
+ </div>
+
 </div>

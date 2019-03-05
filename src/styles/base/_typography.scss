@@ -1,9 +1,26 @@
 /**
  * Basic typography style for copy text
  */
+
 body {
-  color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  color: black;
+  font-style: normal;
+  font-size: $text-size-primary;
+  font-weight: 400;
+  font-family: $text-font-stack;
   background: #f1f1f1;
   margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $text-size-headings;
+  font-weight: $font-weight-headings;
+  line-height: $line-height-default;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }

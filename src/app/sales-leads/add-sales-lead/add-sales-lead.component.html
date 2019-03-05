@@ -5,26 +5,33 @@
 <form class="add-sales-lead__form" [formGroup]="salesLeadForm" (ngSubmit)="onSubmit()">
 <div class="add-sales-lead__form-group">
 <label for="lead">Lead-name</label>
-<input type="text" id="lead" formControlName="lead">
+<br/>
+<input class="add-sales-lead__form-input" type="text" id="lead" formControlName="lead">
 </div>
 <div class="add-sales-lead__form-group">
 <label for="rep">Sales representative</label>
-<input type="text" id="rep" formControlName="rep">
+<br/>
+<input class="add-sales-lead__form-input" type="text" id="rep" formControlName="rep">
 </div>
 <div class="add-sales-lead__form-group">
 <label for="client">Client</label>
-<input type="text" id="client" formControlName="client">
+<br/>
+<input class="add-sales-lead__form-input" type="text" id="client" formControlName="client">
 </div>
 <div class="add-sales-lead__form-group">
 <label for="value">Value</label>
-<input type="text" id="value" formControlName="value">
+<br/>
+<input class="add-sales-lead__form-input" type="text" id="value" formControlName="value">
 </div>
 <div class="add-sales-lead__form-group">
 <label for="date">Date</label>
-<input type="text" id="date" formControlName="date" placeholder="mm/dd/yyyy">
+<br/>
+<input class="add-sales-lead__form-input" type="date" id="date" formControlName="date" placeholder="mm/dd/yyyy">
 </div>
+<div class="add-sales-lead__form-buttons">
 <button class="sales-leads__button--default" type="button" (click)="salesLeadList()">Cancel</button>
 <button class="sales-leads__button" type="submit">Save</button>
+</div>
 </form>
 </div>
 </div>

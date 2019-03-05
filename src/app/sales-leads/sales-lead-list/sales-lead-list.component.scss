@@ -14,11 +14,80 @@
   height: 100%;
 }
 
-td {
-  &:first-child {
-    color: #00a1b2;
+.sales-leads__table {
+  width: 100%;
+  margin-top: 1rem;
+
+  thead th {
+    text-align: left;
   }
-  &:last-child {
-    color: #00a1b2;
+
+  tbody td {
+    text-align: center;
+    padding: 0.5rem;
+    &:first-child {
+      color: #00a1b2;
+    }
+    &:last-child {
+      color: #00a1b2;
+    }
   }
+  tbody tr:nth-child(odd) {
+    background: #fafafa;
+    outline: none;
+  }
+  tr:hover {
+    background: #f1f1f1;
+    border-bottom: solid 1px white;
+    .tw-link {
+      text-decoration: underline;
+    }
+  }
+}
+
+.spinner-loader {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  top: 40%;
+  vertical-align: middle;
+}
+
+.spinner-loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 5px;
+  border-radius: 50%;
+  animation: spinner-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border: 5px solid black;
+  border-color: black transparent transparent transparent;
+}
+
+.spinner-loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.spinner-loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.spinner-loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes spinner-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  position: relative;
 }

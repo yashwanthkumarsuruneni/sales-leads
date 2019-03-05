@@ -1,6 +1,7 @@
-// .accounts-list__item {
-
-// }
+@import "../../../styles/main.scss";
+.accounts-list__heading {
+  margin-left: 12px;
+}
 
 .accounts-list__item {
   border-top: 1px solid #e6e6e6;
@@ -15,4 +16,15 @@
 .accounts-list {
   position: relative;
   top: 60px;
+}
+
+.accounts-list__item-name {
+  margin-left: 12px;
+  font-size: $text-size-primary;
+  padding: 3px 0;
+}
+.accounts-list__item-desc {
+  margin-left: 12px;
+  font-size: $text-size-secondary;
+  padding: 3px 0;
 }
