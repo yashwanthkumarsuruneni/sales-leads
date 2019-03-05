@@ -6,13 +6,18 @@
   width: 88px;
   color: white;
   border-radius: 3px;
+  margin: 3px;
   font-family: $text-font-stack;
+  cursor: pointer;
 }
 
 .sales-leads__button--default {
   @extend .sales-leads__button;
   color: #00a1b2;
   background-color: white;
+  border: 1px solid #00a1b2;
+  margin: 3px;
   font-weight: $font-weight-default;
   font-family: $text-font-stack;
+  cursor: pointer;
 }

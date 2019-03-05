@@ -7,27 +7,32 @@
 <label for="lead">Lead-name</label>
 <br/>
 <input class="add-sales-lead__form-input" type="text" id="lead" formControlName="lead">
+<span class="add-sales-lead__form-error" *ngIf="!salesLeadForm.get('lead').valid && salesLeadForm.get('lead').touched"> Lead name is required !</span>
 </div>
 <div class="add-sales-lead__form-group">
 <label for="rep">Sales representative</label>
 <br/>
 <input class="add-sales-lead__form-input" type="text" id="rep" formControlName="rep">
+<span class="add-sales-lead__form-error" *ngIf="!salesLeadForm.get('rep').valid && salesLeadForm.get('rep').touched"> Sales rep is required !</span>
 </div>
 <div class="add-sales-lead__form-group">
 <label for="client">Client</label>
 <br/>
 <input class="add-sales-lead__form-input" type="text" id="client" formControlName="client">
+<span class="add-sales-lead__form-error" *ngIf="!salesLeadForm.get('client').valid && salesLeadForm.get('client').touched"> Client name is required !</span>
 </div>
 <div class="add-sales-lead__form-group">
 <label for="value">Value</label>
 <br/>
 <input class="add-sales-lead__form-input" type="text" id="value" formControlName="value">
+<span class="add-sales-lead__form-error" *ngIf="!salesLeadForm.get('value').valid && salesLeadForm.get('value').touched"> Please enter the value !</span>
 </div>
 <div class="add-sales-lead__form-group">
 <label for="date">Date</label>
 <br/>
 <input class="add-sales-lead__form-input" type="date" id="date" formControlName="date" placeholder="mm/dd/yyyy">
 </div>
+<span class="add-sales-lead__form-error" *ngIf="!salesLeadForm.valid && salesLeadForm.touched">Please enter valid data !</span>
 <div class="add-sales-lead__form-buttons">
 <button class="sales-leads__button--default" type="button" (click)="salesLeadList()">Cancel</button>
 <button class="sales-leads__button" type="submit">Save</button>

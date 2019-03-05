@@ -26,3 +26,11 @@
 .add-sales-lead__form-buttons {
   text-align: right;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.add-sales-lead__form-error {
+  color: red;
+}

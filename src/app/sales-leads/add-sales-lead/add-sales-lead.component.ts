@@ -33,9 +33,8 @@ export class AddSalesLeadComponent implements OnInit {
         ...this.salesLeadForm.value,
         date: new Date(this.salesLeadForm.value.date).getTime()
       })
-      .subscribe(console.log);
+      .subscribe(() => this.router.navigate(["salesleads"]));
     this.salesLeadForm.reset();
-    this.router.navigate(["salesleads"]);
   }
   salesLeadList() {
     this.router.navigate(["salesleads"]);
