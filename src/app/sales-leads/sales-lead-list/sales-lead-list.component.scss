@@ -16,37 +16,102 @@
 
 .sales-leads__table {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 16px;
 
   thead th {
     text-align: left;
     font-size: 12px;
     font-weight: normal;
+    padding: 0 11.2px;
     &:first-child {
       text-align: left;
+      &:after {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 78%;
+      }
     }
     &:last-child {
       text-align: right;
+      &:before {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 43%;
+      }
     }
-    &:not(:first-child):not(:last-child) {
-      padding-left: 35px;
+    &:nth-child(n + 4) {
+      text-align: right;
     }
     &:nth-child(2) {
       font-weight: bold;
+      text-align: left;
+      &:after {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 62%;
+      }
+    }
+    &:nth-child(3) {
+      &:after {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 58%;
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 75%;
+      }
+    }
+    &:nth-child(5) {
+      &:before {
+        background-color: #e6e6e6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: baseline;
+        width: 68%;
+      }
     }
   }
 
   tbody td {
-    text-align: center;
     padding: 0.7rem;
     &:first-child {
       color: #00a1b2;
     }
-    &:last-child {
-      color: #00a1b2;
-    }
     &:nth-child(2) {
       font-weight: bold;
+    }
+    &:nth-child(n + 4) {
+      text-align: right;
+    }
+    &:last-child {
+      color: #00a1b2;
+      text-align: right;
     }
   }
   tbody tr:nth-child(odd) {

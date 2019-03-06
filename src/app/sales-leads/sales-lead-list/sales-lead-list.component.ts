@@ -10,6 +10,7 @@ import { SalesLeadService } from "../../leads-service";
 export class SalesLeadListComponent implements OnInit {
   count: number;
   default = 5;
+  showMore = true;
   salesLeads: Array<any>;
   sales: Array<any>;
   constructor(
@@ -34,15 +35,17 @@ export class SalesLeadListComponent implements OnInit {
     this.router.navigate(["addsaleslead"], { relativeTo: this.route });
   }
   loadMore(e) {
-    if (this.salesLeads.length - this.default > 5) {
-      this.sales = this.salesLeads.slice(0, this.default + e);
-      this.default += e;
-    } else if (this.salesLeads.length === this.default) {
+    if (e === "none") {
       this.default = 5;
       this.sales = this.salesLeads.slice(0, this.default);
+      this.showMore = true;
+    } else if (this.salesLeads.length - this.default > 5) {
+      this.sales = this.salesLeads.slice(0, this.default + e);
+      this.default += e;
     } else {
       this.sales = this.salesLeads.slice(0, this.default + e);
       this.default = this.default + (this.salesLeads.length - this.default);
+      this.showMore = false;
     }
   }
 }

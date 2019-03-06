@@ -21,7 +21,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #00a1b2;
+  border: 1px solid #cccccc;
 }
 .add-sales-lead__form-buttons {
   text-align: right;
@@ -33,4 +33,9 @@ input.ng-invalid.ng-touched {
 
 .add-sales-lead__form-error {
   color: red;
+}
+
+.add-sales-lead__form-label {
+  font-size: 12px;
+  line-height: 1.9;
 }

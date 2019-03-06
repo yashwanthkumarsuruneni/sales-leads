@@ -27,21 +27,21 @@ Showing {{default}} of {{count}}
      <td>{{salesLead.lead}}</td>
      <td>{{salesLead.rep}}</td>
       <td>{{salesLead.client}}</td>
-      <td>{{salesLead.value}}</td>
-       <td>{{salesLead.date | date:'short'}}</td>
+      <td>{{(salesLead.value | currency).split('.')[0]}}</td>
+       <td>{{(salesLead.date | date:'short').split(',')[0]}}</td>
       <td>X</td>
    </tr>
   <tbody>
   </table>
  </div>
  <div class="sales-leads__paginator">
-  <div *ngIf="default !== count; else showLess">
+   <div *ngIf="showMore">
   <div class="sales-leads__paginator-text" (click)="loadMore(5)">Show 5 more</div>
   <div class="sales-leads__paginator-icon--open"></div>
   </div>
-  <ng-template #showLess>
+  <div *ngIf="default === count">
   <div class="sales-leads__paginator-icon--close"></div>
-  <div class="sales-leads__paginator-text" (click)="loadMore(5)">Show Less</div>
-  </ng-template>
+  <div class="sales-leads__paginator-text" (click)="loadMore('none')">Show Less</div>
+  </div>
  </div>
 </div>

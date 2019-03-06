@@ -12,15 +12,22 @@ body {
   margin: 0px;
 }
 
-h1,
+h1 {
+  font-size: $text-size-headings;
+  font-weight: $font-weight-headings;
+  line-height: $line-height-default;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: $text-size-headings;
+  font-size: $text-size-content-headings;
   font-weight: $font-weight-headings;
-  line-height: $line-height-default;
+  line-height: $line-height-content-headings;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
