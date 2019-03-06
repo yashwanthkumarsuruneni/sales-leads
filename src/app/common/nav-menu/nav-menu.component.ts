@@ -8,7 +8,7 @@ import { Account } from "../../account";
 export class NavMenuComponent implements OnInit {
   accounts: Account[] = [
     {
-      name: "Sales Lead",
+      name: "Sales Leads",
       description: "Review and create new leads",
       path: "salesleads"
     },

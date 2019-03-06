@@ -9,8 +9,9 @@ import { SalesLeadService } from "../../leads-service";
 })
 export class SalesLeadListComponent implements OnInit {
   count: number;
-  showSpinner = true;
+  default = 5;
   salesLeads: Array<any>;
+  sales: Array<any>;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -26,10 +27,22 @@ export class SalesLeadListComponent implements OnInit {
     this.salesLead.getSalesLeads().subscribe(({ count, payload }) => {
       this.count = count;
       this.salesLeads = payload;
-      this.showSpinner = false;
+      this.sales = this.salesLeads.slice(0, this.default);
     });
   }
   addSalesLead() {
     this.router.navigate(["addsaleslead"], { relativeTo: this.route });
+  }
+  loadMore(e) {
+    if (this.salesLeads.length - this.default > 5) {
+      this.sales = this.salesLeads.slice(0, this.default + e);
+      this.default += e;
+    } else if (this.salesLeads.length === this.default) {
+      this.default = 5;
+      this.sales = this.salesLeads.slice(0, this.default);
+    } else {
+      this.sales = this.salesLeads.slice(0, this.default + e);
+      this.default = this.default + (this.salesLeads.length - this.default);
+    }
   }
 }

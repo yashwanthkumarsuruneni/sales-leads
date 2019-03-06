@@ -20,16 +20,33 @@
 
   thead th {
     text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+    &:not(:first-child):not(:last-child) {
+      padding-left: 35px;
+    }
+    &:nth-child(2) {
+      font-weight: bold;
+    }
   }
 
   tbody td {
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.7rem;
     &:first-child {
       color: #00a1b2;
     }
     &:last-child {
       color: #00a1b2;
+    }
+    &:nth-child(2) {
+      font-weight: bold;
     }
   }
   tbody tr:nth-child(odd) {
@@ -45,49 +62,38 @@
   }
 }
 
-.spinner-loader {
+.sales-leads__paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.sales-leads__paginator-icon {
+  border: 1px solid #00a1b2;
+  border-width: 2px 2px 0 0;
+  content: "";
   display: inline-block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 3rem;
-  width: 3rem;
-  top: 40%;
-  vertical-align: middle;
-}
-
-.spinner-loader div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 5px;
-  border-radius: 50%;
-  animation: spinner-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border: 5px solid black;
-  border-color: black transparent transparent transparent;
-}
-
-.spinner-loader div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.spinner-loader div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.spinner-loader div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes spinner-loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.spinner {
+  height: 14.5px;
+  left: 37px;
   position: relative;
+  top: 2.4px;
+  vertical-align: top;
+  width: 14.5px;
+  top: 0;
+}
+
+.sales-leads__paginator-icon--open {
+  @extend .sales-leads__paginator-icon;
+  transform: rotate(135deg);
+}
+
+.sales-leads__paginator-icon--close {
+  @extend .sales-leads__paginator-icon;
+  transform: rotate(-45deg);
+  margin: -8px;
+}
+
+.sales-leads__paginator-text {
+  color: #00a1b2;
 }

@@ -5,7 +5,7 @@ Sales Leads
 </h1>
 </div>
 <div>
-Showing {{count}} of {{count}}
+Showing {{default}} of {{count}}
 </div>
 <div class="sales-leads">
  <button class="sales-leads__button" (click)="addSalesLead()" type="button"> Add Lead</button>
@@ -23,7 +23,7 @@ Showing {{count}} of {{count}}
     </tr>
   </thead>
   <tbody>
-   <tr *ngFor="let salesLead of salesLeads">
+   <tr *ngFor="let salesLead of sales">
      <td>{{salesLead.lead}}</td>
      <td>{{salesLead.rep}}</td>
       <td>{{salesLead.client}}</td>
@@ -34,5 +34,14 @@ Showing {{count}} of {{count}}
   <tbody>
   </table>
  </div>
-
+ <div class="sales-leads__paginator">
+  <div *ngIf="default !== count; else showLess">
+  <div class="sales-leads__paginator-text" (click)="loadMore(5)">Show 5 more</div>
+  <div class="sales-leads__paginator-icon--open"></div>
+  </div>
+  <ng-template #showLess>
+  <div class="sales-leads__paginator-icon--close"></div>
+  <div class="sales-leads__paginator-text" (click)="loadMore(5)">Show Less</div>
+  </ng-template>
+ </div>
 </div>

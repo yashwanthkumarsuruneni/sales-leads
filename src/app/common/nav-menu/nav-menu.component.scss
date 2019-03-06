@@ -28,3 +28,8 @@
   font-size: $text-size-secondary;
   padding: 3px 0;
 }
+
+.active > .accounts-list__item-name {
+  color: #00a1b2;
+  font-weight: bold;
+}
