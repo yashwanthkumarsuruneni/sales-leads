@@ -35,13 +35,13 @@ Showing {{default}} of {{count}}
   </table>
  </div>
  <div class="sales-leads__paginator">
-   <div *ngIf="showMore">
-  <div class="sales-leads__paginator-text" (click)="loadMore(5)">Show 5 more</div>
+   <div *ngIf="showMore" (click)="loadMore(5)">
+  <div class="sales-leads__paginator-text" >Show 5 more</div>
   <div class="sales-leads__paginator-icon--open"></div>
   </div>
-  <div *ngIf="default === count">
+  <div *ngIf="default === count" (click)="loadMore('none')">
   <div class="sales-leads__paginator-icon--close"></div>
-  <div class="sales-leads__paginator-text" (click)="loadMore('none')">Show Less</div>
+  <div class="sales-leads__paginator-text">Show Less</div>
   </div>
  </div>
 </div>
